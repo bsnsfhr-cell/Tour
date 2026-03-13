@@ -2,35 +2,58 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Paket Tour | Menjangan Island Trip</title>
+    <title>Paket Tour Lengkap | Menjangan Island Trip</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50 font-[Poppins]">
+<body class="bg-white">
     <nav class="fixed w-full z-[100] bg-white shadow-sm py-4 px-6 flex justify-between items-center font-bold">
-        <a href="index.html">MENJANGAN TRIP</a>
-        <div class="space-x-6 uppercase text-sm">
-            <a href="index.html" class="text-slate-700">Beranda</a>
-            <a href="tentang.html" class="text-slate-700">Tentang Kami</a>
-            <a href="paket.html" class="text-blue-600">Paket</a>
-            <a href="kontak.html" class="text-slate-700">Kontak</a>
+        <a href="index.html" class="text-blue-900 uppercase tracking-tighter">Menjangan Trip</a>
+        <div class="space-x-6 uppercase text-[10px] hidden md:block">
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="paket.html" class="text-blue-600 border-b-2 border-blue-600">Paket Tour</a>
+            <a href="kontak.html">Kontak</a>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-blue-900 mb-12 uppercase tracking-widest">Daftar Paket Tour</h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-             <div class="bg-white p-8 rounded-3xl shadow-lg border text-center">
-                <h4 class="font-bold text-xl mb-4">Snorkeling</h4>
-                <p class="text-blue-600 font-bold mb-6 text-2xl">IDR 500.000</p>
-                <a href="https://wa.me/628123456789" class="bg-blue-600 text-white px-8 py-3 rounded-full block font-bold">Pesan Sekarang</a>
-             </div>
-             <div class="bg-white p-8 rounded-3xl shadow-lg border text-center border-blue-600">
-                <h4 class="font-bold text-xl mb-4">Scuba Diving</h4>
-                <p class="text-blue-600 font-bold mb-6 text-2xl">IDR 1.200.000</p>
-                <a href="https://wa.me/628123456789" class="bg-blue-600 text-white px-8 py-3 rounded-full block font-bold">Pesan Sekarang</a>
-             </div>
+    <section class="pt-40 pb-16 bg-blue-900 text-white text-center">
+        <h1 class="text-4xl font-bold uppercase tracking-widest">Pricelist 2026</h1>
+        <p class="mt-4 text-blue-300 italic">Harga jujur, tanpa biaya tambahan di dermaga.</p>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="border-2 border-slate-100 p-8 rounded-[40px] hover:border-blue-500 transition-all duration-500" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-blue-900 mb-2">Snorkeling</h3>
+                <p class="text-blue-500 font-bold mb-6">IDR 500.000 <span class="text-gray-400 font-normal text-xs">/pax</span></p>
+                <ul class="space-y-4 mb-10 text-sm text-gray-600">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Kapal Kayu Tradisional</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Alat Snorkeling (Lengkap)</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Makan Siang (Nasi Box)</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Tiket Taman Nasional</li>
+                </ul>
+                <a href="#" class="block text-center py-4 bg-slate-100 rounded-full font-bold hover:bg-blue-600 hover:text-white transition uppercase text-xs">Pilih Paket</a>
+            </div>
+            </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-y">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h3 class="text-2xl font-bold mb-6">Syarat & Ketentuan</h3>
+            <div class="text-left text-gray-600 space-y-4 text-sm leading-relaxed">
+                <p>1. Reservasi minimal dilakukan H-1 melalui WhatsApp.</p>
+                <p>2. Anak-anak di bawah 5 tahun tidak dikenakan biaya (FOC).</p>
+                <p>3. Harga sudah termasuk asuransi dan retribusi pemda.</p>
+            </div>
         </div>
     </section>
+
+    <footer class="bg-slate-900 text-white pt-20 pb-10">
+        </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
