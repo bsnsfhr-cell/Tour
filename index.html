@@ -3,38 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menjangan Island Trip | Professional Snorkeling & Diving</title>
+    <title>Menjangan Island Trip | Professional Local Operator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        .bg-navy { background-color: #002b5b; }
-        .text-navy { color: #002b5b; }
+        /* Hero dengan Background Laut */
         .hero-bg {
-            background: linear-gradient(rgba(0, 43, 91, 0.5), rgba(0, 43, 91, 0.5)), 
+            background: linear-gradient(rgba(0, 20, 40, 0.5), rgba(0, 20, 40, 0.5)), 
                         url('https://images.unsplash.com/photo-1544551763-47a0159f9234?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
+        .modal { 
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0; 
+            width: 100%; height: 100%; background: rgba(0, 15, 30, 0.92); 
+            backdrop-filter: blur(8px); align-items: center; justify-content: center;
+        }
+        .animate-modal { animation: zoomIn 0.3s ease-out; }
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
     </style>
 </head>
 <body class="bg-white text-slate-800 overflow-x-hidden">
 
-    <header class="hero-bg h-screen flex items-center justify-center text-white text-center">
-        <div class="px-4" data-aos="zoom-in" data-aos-duration="1000">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">Menjangan Island Trip</h1>
-            <p class="text-xl md:text-2xl font-light mb-8">Official Local Guide for Snorkeling & Scuba Diving</p>
-            <a href="#booking" class="bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-md font-bold text-lg transition-all inline-block shadow-lg">BOOKING NOW</a>
-        </div>
-    </header>
+<header class="h-screen flex items-center justify-center text-white text-center bg-cover bg-center bg-no-repeat relative" 
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop');">
+    
+    <div class="px-4 relative z-10" data-aos="zoom-out" data-aos-duration="2000">
+        <span class="uppercase tracking-[0.4em] text-xs md:text-sm mb-4 block font-semibold text-blue-300">Official Local Guide</span>
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight">DIVE INTO<br>PARADISE</h1>
+        <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+        <p class="text-xl md:text-2xl font-light italic opacity-90">Menjangan Island: Bali's Best Kept Underwater Secret.</p>
+    </div>
+</header>
+
 
     <section class="py-24 container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-navy mb-4" data-aos="fade-up">Explore Our Destinations</h2>
+        <div class="text-center mb-20">
+            <h2 class="text-4xl font-bold text-blue-900 mb-4" data-aos="fade-up">Eksplorasi Destinasi</h2>
             <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
 
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-xl border-b-8 border-blue-600">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Menjangan Island Snorkeling</h3>
+                <p class="text-gray-600 leading-relaxed text-justify">Pulau Menjangan dikenal sebagai lokasi snorkeling terbaik di Bali berkat kejernihan airnya yang luar biasa. Anda akan menemukan taman laut yang spektakuler dengan berbagai jenis terumbu karang warna-warni dan ribuan ikan tropis.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+            <div class="md:w-1/2" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-xl border-b-8 border-blue-600">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">The Majestic Wall Diving</h3>
+                <p class="text-gray-600 leading-relaxed text-justify">Bagi para penyelam, Menjangan menawarkan sensasi "Wall Diving" yang ikonik. Dinding vertikal bawah laut ini dihiasi dengan kipas laut (Sea Fans) raksasa, menciptakan pemandangan yang takkan pernah terlupakan.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-xl border-b-8 border-blue-600">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">West Bali National Park</h3>
+                <p class="text-gray-600 leading-relaxed text-justify">Sebagai bagian dari Taman Nasional Bali Barat, wilayah daratan menawarkan pemandangan hutan tropis yang asri. Anda dapat menjumpai rusa liar di pesisir atau melihat burung Jalak Bali yang langka.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-16" data-aos="fade-up">Paket Tour Kami</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border hover:shadow-2xl transition" data-aos="flip-left">
+                    <img src="https://images.unsplash.com/photo-1544551763-47a0159f9234?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h4 class="font-bold text-xl mb-2">Snorkeling Menjangan</h4>
+                        <p class="text-blue-600 font-bold mb-6 text-lg">IDR 500.000 / Orang</p>
+                        <button onclick="openModal('modal-snorkeling')" class="bg-blue-600 text-white px-6 py-2 rounded-full w-full font-semibold hover:bg-blue-700 transition">Detail Paket</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border hover:shadow-2xl transition" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h4 class="font-bold text-xl mb-2">Scuba Diving</h4>
+                        <p class="text-blue-600 font-bold mb-6 text-lg">IDR 1.200.000 / Orang</p>
+                        <button onclick="openModal('modal-diving')" class="bg-blue-600 text-white px-6 py-2 rounded-full w-full font-semibold hover:bg-blue-700 transition">Detail Paket</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg border hover:shadow-2xl transition" data-aos="flip-left" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h4 class="font-bold text-xl mb-2">Try Scuba (Intro)</h4>
+                        <p class="text-blue-600 font-bold mb-6 text-lg">IDR 900.000 / Orang</p>
+                        <button onclick="openModal('modal-try-scuba')" class="bg-blue-600 text-white px-6 py-2 rounded-full w-full font-semibold hover:bg-blue-700 transition">Detail Paket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">Apa Kata Mereka?</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="p-10 border rounded-3xl shadow-sm italic text-gray-600" data-aos="fade-right">
+                    "Airnya sangat jernih dan guide lokal sangat sabar menemani anak-anak kami saat snorkeling. Luar biasa!"
+                    <p class="font-bold text-blue-900 mt-4 not-italic">- Budi, Surabaya</p>
+                </div>
+                <div class="p-10 border rounded-3xl shadow-sm italic text-gray-600" data-aos="fade-left">
+                    "Wall diving terbaik yang pernah saya coba. Tim profesional dan sangat memperhatikan keselamatan."
+                    <p class="font-bold text-blue-900 mt-4 not-italic">- Jessica, Australia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-4xl font-bold text-blue-900 mb-8" data-aos="fade-up">Tentang Kami</h2>
+            <div class="bg-white p-12 rounded-[40px] shadow-sm border-l-[12px] border-blue-600 text-left" data-aos="zoom-in">
+                <p class="text-gray-700 leading-loose mb-6 text-lg text-justify">Kami adalah operator lokal resmi di Labuan Lalang dengan pengalaman lebih dari 10 tahun melayani wisatawan untuk trip Pulau Menjangan.</p>
+                <p class="text-gray-700 leading-loose text-lg text-justify">Prioritas utama kami adalah <strong>keamanan dan pelestarian lingkungan</strong>. Kami menggunakan peralatan standar internasional dan guide lokal bersertifikat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-blue-900 text-white text-center">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <div data-aos="fade-up"><i class="fas fa-shield-alt text-5xl mb-4 text-blue-400"></i><h5 class="font-bold text-xl">100% Safety</h5></div>
+            <div data-aos="fade-up" data-aos-delay="100"><i class="fas fa-anchor text-5xl mb-4 text-blue-400"></i><h5 class="font-bold text-xl">Local Expert</h5></div>
+            <div data-aos="fade-up" data-aos-delay="200"><i class="fas fa-users text-5xl mb-4 text-blue-400"></i><h5 class="font-bold text-xl">Small Group</h5></div>
+            <div data-aos="fade-up" data-aos-delay="300"><i class="fas fa-hand-holding-usd text-5xl mb-4 text-blue-400"></i><h5 class="font-bold text-xl">Best Price</h5></div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-16 mb-16 text-center md:text-left">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Menjangan Island Trip</h3>
+                    <p class="text-gray-400 leading-relaxed text-justify">Pusat pemesanan tiket resmi untuk perjalanan snorkeling dan diving ke Pulau Menjangan, Bali Barat.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-blue-400 text-xl">Kontak Kami</h4>
+                    <p class="text-gray-400">Labuan Lalang, Gilimanuk, Bali Barat<br>WhatsApp: +62 812 3456 789<br>Email: trip@menjanganisland.com</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-blue-400 text-xl">Media Sosial</h4>
+                    <div class="flex justify-center md:justify-start gap-6 text-3xl">
+                        <i class="fab fa-instagram hover:text-pink-500 cursor-pointer transition"></i>
+                        <i class="fab fa-facebook hover:text-blue-500 cursor-pointer transition"></i>
+                        <i class="fab fa-whatsapp hover:text-green-500 cursor-pointer transition"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-10 text-center text-gray-500 text-sm">
+                &copy; 2026 Menjangan Island Trip | Professional Local Operator Bali.
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-snorkeling" class="modal">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-10 relative mx-4 animate-modal shadow-2xl">
+            <button onclick="closeModal('modal-snorkeling')" class="absolute top-6 right-6 text-4xl text-gray-400 hover:text-black">&times;</button>
+            <h3 class="font-bold text-2xl mb-6 text-blue-900 border-b pb-4 text-center">Inklusi Paket Snorkeling</h3>
+            <ul class="text-left space-y-3 mb-8 text-gray-600 text-lg">
+                <li><i class="fas fa-check text-green-500 mr-2"></i> Kapal kayu tradisional khusus snorkeling</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i> Alat lengkap (Mask, Fin, Life Jacket)</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i> Makan siang box & air mineral</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i> Tiket masuk & pemandu lokal</li>
+            </ul>
+            <a href="https://wa.me/628123456789" class="bg-green-500 text-white w-full py-4 rounded-2xl font-bold block text-center text-xl shadow-lg hover:bg-green-600">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+        window.onclick = function(e) { if (e.target.className === 'modal') e.target.style.display = 'none'; }
+    </script>
+</body>
+</html>
         <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
             <div class="md:w-1/2" data-aos="fade-right">
                 <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-xl border-b-8 border-blue-600">
